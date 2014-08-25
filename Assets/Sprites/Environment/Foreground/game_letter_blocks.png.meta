@@ -1,0 +1,400 @@
+fileFormatVersion: 2
+guid: e7b1ad537d230ca438dc8890330fb1f3
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: game_letter_blocks
+    21300002: gameletter_a
+    21300004: gameletter_b
+    21300006: gameletter_c
+    21300008: gameletter_d
+    21300010: gameletter_e
+    21300012: gameletter_f
+    21300014: gameletter_g
+    21300016: gameletter_h
+    21300018: gameletter_i
+    21300020: gameletter_j
+    21300022: gameletter_k
+    21300024: gameletter_l
+    21300026: gameletter_m
+    21300028: gameletter_n
+    21300030: gameletter_o
+    21300032: gameletter_p
+    21300034: gameletter_q
+    21300036: gameletter_r
+    21300038: gameletter_s
+    21300040: gameletter_t
+    21300042: gameletter_u
+    21300044: gameletter_v
+    21300046: gameletter_w
+    21300048: gameletter_x
+    21300050: gameletter_y
+    21300052: gameletter_active
+    21300054: gameletter_dash
+    21300056: gameletter_slash
+    21300058: gameletter_pos
+    21300060: gameletter_comma
+    21300062: gameletter_inactive
+    21300064: gameletter_z
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 512
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: gameletter_a
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 266
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_b
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 266
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_c
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 266
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_d
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 266
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_e
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 266
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_f
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 222
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_g
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 222
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_h
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 222
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_i
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 222
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_j
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 222
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_k
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 179
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_l
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 178
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_m
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 178
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_n
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 178
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_o
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 178
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_p
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 134
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_q
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 134
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_r
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 134
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_s
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 134
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_t
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 134
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_u
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 89
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_v
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 89
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_w
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 89
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_x
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 89
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_y
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 89
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_active
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1
+        width: 44
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_dash
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 45
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_slash
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 45
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_pos
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 45
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_comma
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 45
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_inactive
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 0
+        width: 47
+        height: 44
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gameletter_z
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 45
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: c846640ecbfdf5c44966ed88360c6d68
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - defaultGraphic: {fileID: 21300062, guid: e7b1ad537d230ca438dc8890330fb1f3, type: 3}
+  - activeGraphic: {fileID: 21300052, guid: e7b1ad537d230ca438dc8890330fb1f3, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
