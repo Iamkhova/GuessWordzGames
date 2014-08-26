@@ -8,8 +8,14 @@ public class GameController : MonoBehaviour
 	public float gameboard_y = 2.0f;
 	public int maxNumRows = 14;
 	public int maxNumColumns = 4;
+	public string title = " Andriod App Developer";
+	public string phrase = "Kareem Jamaal Glover";
+	public string hint ="Married to Carmen Neal";
 
 	public GameObject[] gameBlockArray;
+	public PhraseHandler.PhraseData thePhrase = new PhraseHandler.PhraseData();
+	public PhraseHandler phraseHandler;
+
 
 	//Do upon Init
 	void Awake()
@@ -21,6 +27,14 @@ public class GameController : MonoBehaviour
 	void Start () {
 		buildGameBoard();  
 		gameBlockArray = GameObject.FindGameObjectsWithTag ("game_block");
+
+			phraseHandler = GetComponent<PhraseHandler>();
+		
+
+		thePhrase = phraseHandler.convertPhrase (phrase, hint, title);
+
+
+
 	
 	}// end of void START
 	
