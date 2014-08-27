@@ -14,125 +14,77 @@ public class PhraseHandler : MonoBehaviour {
 
 	}//end PhraseData Class
 
+	/*
+      * convertPhrase Handles the converting of phrase into game data. 
+      * This takes the string and breaks it into separate rows.  The loop 
+      * takes the word and assign it to corresponding row line depending 
+      * on the number of free letter spaces available.
+      */
 	public PhraseData convertPhrase(string phrase, string hint, string title)
 	{
-		PhraseData tempPhrase = new PhraseData ();
-		string line1, line2, line3, line4, space, tempword;
-
-		Debug.Log("received Phrase: " + phrase);
-
-		int wordcount = 0;
-		string[] words = phrase.Split(' '); // split string into word array
-
+		// Pull data from attached componets
 		GameObject gameBoardController = GameObject.Find("GameBoardController");
 		GameController gameController = gameBoardController.GetComponent<GameController>();
 
+		//Variables
+		PhraseData tempPhrase = new PhraseData ();
+		string space, tempword;
+		string[] line = new string[gameController.maxNumColumns];
+
+		Debug.Log("received Phrase: " + phrase);
+		Debug.Log("Phrase Length: " + phrase.Length.ToString());
 
 		//Initalize Variables
-		line1 = "";
-		line2 = "";
-		line3 = "";
-		line4 = "";
+		int wordcount = 0;
+		int linecount = 0;
+		string[] words = phrase.Split(' '); // split string into word array
+		for (int i = 0; i < gameController.maxNumColumns; i++) 
+		{
+			line[i] = "";
+		}
 		space = "";
 		tempword = "";
 
-		//Start Word Splitting Loop
-		int linecount = 1;
+		// Start Phrase Splitting Loop
 
-		//foreach (string s in arr)
 		foreach (string word in words) 
 		{
-			if (linecount == 1)
+			for (int cycle = 0; cycle < gameController.maxNumColumns; cycle++)
 			{
-				if (line1.Length <= gameController.maxNumRows)
+				if (linecount == cycle)
 				{
-					if (line1.Length > 0) { space = " "; }
-					tempword = line1;
-					tempword += space + "" + word;
-
-					if (tempword.Length < gameController.maxNumRows)
+					if (line[cycle].Length <= gameController.maxNumRows)
 					{
-						line1 += space + "" + word;
-					}
-					else{
-						linecount = 2;
-						space = "";
-					}//end if/else
-				}// end if
-			}// end if
+						if (line[cycle].Length > 0){space = " ";}
+						tempword = line[cycle];
+						tempword += space + "" + word;
 
-			Debug.Log("word cycle 1" + word);
-
-			if (linecount == 2)
-			{
-				if (line1.Length <= gameController.maxNumRows)
-				{
-					if (line2.Length > 0) { space = " ";}
-					tempword = line2;
-					tempword += space + "" + word;
-
-					if (tempword.Length < gameController.maxNumRows)
-					{
-						line2 += space + "" + word;
-					}// endif
-					else
-					{
-						linecount = 3;
-						space = "";
-					}// endif/else
-				}// end if	
-			}// end if
-
-			if (linecount == 3)
-			{
-				if (line3.Length <= gameController.maxNumRows)
-				{
-					if (line1.Length > 0) {space = " "; }
-					tempword = line3;
-					tempword += space + " " + word;
-
-					if (tempword.Length < gameController.maxNumRows)
-					{
-						line3 += space + " " + word;
-					}
-					else{
-						linecount = 4;
-						space = "";
-					}//endifelse
-				}//endif
-			}// endif
-
-			if (linecount == 4)
-			{
-				if (line1.Length <= gameController.maxNumRows)
-				{
-					if (line4.Length > 0) { space = " "; }
-					tempword = line4;
-					tempword += space + " " + word;
-
-					if (tempword.Length < gameController.maxNumRows)
-					{
-						line4 += space + " " + word;
-					}else{
-						linecount = 5;
+						if (tempword.Length < gameController.maxNumRows)
+						{
+							line[cycle] += space + "" + word;
+						}else{
+							linecount = cycle + 1;
+							space = "";
+						}
 					}
 				}
-			}
+
+			}// end for loop
 
 			wordcount += 1;
 		}// end foreach
 
 		tempPhrase.hint = hint;
 		tempPhrase.title = title;
-		tempPhrase.line1 = line1;
-		tempPhrase.line2 = line2;
-		tempPhrase.line3 = line3;
-		tempPhrase.line4 = line4;
+		tempPhrase.line1 = line[0];
+		tempPhrase.line2 = line[1];
+		tempPhrase.line3 = line[2];
+		tempPhrase.line4 = line[3];
 
-		Debug.Log("Line1: " + line1);
-		Debug.Log("Line2" + line2);
-		Debug.Log("Line3" + line3);
-		Debug.Log("Line4" + line4);
+		Debug.Log("Line1: " + line[0]);
+		Debug.Log("Line2: " + line[1]);
+		Debug.Log("Line3: " + line[2]);
+		Debug.Log("Line4: " + line[3]);
 
 		return tempPhrase;
 
