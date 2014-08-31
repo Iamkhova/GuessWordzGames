@@ -14,6 +14,61 @@ public class PhraseHandler : MonoBehaviour {
 
 	}//end PhraseData Class
 
+	//Get Max Length of Scoreboard Row
+	private int getMaxRowLength()
+	{
+		// Pull data from attached componets
+		GameObject gameBoardController = GameObject.Find("GameBoardController");
+		GameController gameController = gameBoardController.GetComponent<GameController>();
+
+		int max;
+		// Pull data from attached componets
+
+		max = gameController.maxNumRows;
+
+		return max;
+
+	}
+
+	//Get Max Column Length of Scoreboard
+	private int getMaxColLength()
+	{
+		// Pull data from attached componets
+		GameObject gameBoardController = GameObject.Find("GameBoardController");
+		GameController gameController = gameBoardController.GetComponent<GameController>();
+
+		int max;
+		// Pull data from attached componets
+		
+		max = gameController.maxNumColumns;
+		
+		return max;
+		
+	}
+
+	//Center the Phrase for the board
+	public string centerPhrase(string phraseline)
+	{
+
+		int padding;
+		string phrase = phraseline;
+
+		padding = (getMaxRowLength() - phrase.Length) / 2;
+
+		System.Text.StringBuilder sb = new System.Text.StringBuilder ();
+		sb.Append ("".PadLeft (padding));
+		sb.Append (phrase);
+		sb.Append ("".PadRight (padding));
+		phrase = sb.ToString ();
+
+		Debug.Log ("Padding: " + padding);
+		Debug.Log("Center Phrase: *" + phrase + "*");
+		Debug.Log("Phrase Length: " + phrase.Length.ToString());
+
+		return phrase;
+
+	}
+
 	/*
       * convertPhrase Handles the converting of phrase into game data. 
       * This takes the string and breaks it into separate rows.  The loop 
@@ -22,14 +77,13 @@ public class PhraseHandler : MonoBehaviour {
       */
 	public PhraseData convertPhrase(string phrase, string hint, string title)
 	{
-		// Pull data from attached componets
-		GameObject gameBoardController = GameObject.Find("GameBoardController");
-		GameController gameController = gameBoardController.GetComponent<GameController>();
-
 		//Variables
+		int maxRowLength = getMaxRowLength();
+		int maxColLength = getMaxColLength();
+
 		PhraseData tempPhrase = new PhraseData ();
 		string space, tempword;
-		string[] line = new string[gameController.maxNumColumns];
+		string[] line = new string[maxRowLength];
 
 		Debug.Log("received Phrase: " + phrase);
 		Debug.Log("Phrase Length: " + phrase.Length.ToString());
@@ -38,7 +92,7 @@ public class PhraseHandler : MonoBehaviour {
 		int wordcount = 0;
 		int linecount = 0;
 		string[] words = phrase.Split(' '); // split string into word array
-		for (int i = 0; i < gameController.maxNumColumns; i++) 
+		for (int i = 0; i < maxColLength; i++) 
 		{
 			line[i] = "";
 		}
@@ -49,17 +103,17 @@ public class PhraseHandler : MonoBehaviour {
 
 		foreach (string word in words) 
 		{
-			for (int cycle = 0; cycle < gameController.maxNumColumns; cycle++)
+			for (int cycle = 0; cycle < maxRowLength; cycle++)
 			{
 				if (linecount == cycle)
 				{
-					if (line[cycle].Length <= gameController.maxNumRows)
+					if (line[cycle].Length <= maxRowLength)
 					{
 						if (line[cycle].Length > 0){space = " ";}
 						tempword = line[cycle];
 						tempword += space + "" + word;
 
-						if (tempword.Length < gameController.maxNumRows)
+						if (tempword.Length < maxRowLength)
 						{
 							line[cycle] += space + "" + word;
 						}else{

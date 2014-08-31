@@ -32,6 +32,8 @@ public class GameController : MonoBehaviour
 		
 
 		thePhrase = phraseHandler.convertPhrase (phrase, hint, title);
+		thePhrase.line1 = phraseHandler.centerPhrase (thePhrase.line1);
+		Debug.Log ("Center Phrase:" + thePhrase.line1);
 
 
 
