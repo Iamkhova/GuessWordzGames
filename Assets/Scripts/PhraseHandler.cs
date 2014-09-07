@@ -47,26 +47,56 @@ public class PhraseHandler : MonoBehaviour {
 	}
 
 	//Center the Phrase for the board
-	public string centerPhrase(string phraseline)
+	string centerPhrase(string phraseline)
 	{
 
 		int padding;
 		string phrase = phraseline;
 
-		padding = (getMaxRowLength() - phrase.Length) / 2;
+		padding = (getMaxRowLength () - phrase.Length) / 2;
 
 		System.Text.StringBuilder sb = new System.Text.StringBuilder ();
-		sb.Append ("".PadLeft (padding));
+		sb.Append (" ".PadLeft (padding));
 		sb.Append (phrase);
-		sb.Append ("".PadRight (padding));
+		sb.Append (" ".PadRight (padding));
 		phrase = sb.ToString ();
 
 		Debug.Log ("Padding: " + padding);
-		Debug.Log("Center Phrase: *" + phrase + "*");
-		Debug.Log("Phrase Length: " + phrase.Length.ToString());
+		Debug.Log ("Center Phrase: *" + phrase + "*");
+		Debug.Log ("Phrase Length: " + phrase.Length.ToString ());
 
 		return phrase;
 
+
+	}
+
+	public PhraseData getNewPhrase()
+	{
+		//TODO Ideally this will load from XML file or from WEB API
+		PhraseData newPhrase = new PhraseData ();
+
+		string title = " Andriod App Developer";
+		string phrase = "Kareem Jamaal Glover like candy apples";
+		string hint ="Married to Carmen Neal";
+
+		// Convert phrase into game format
+		newPhrase = convertPhrase (phrase, hint, title);
+
+		//Center phrase line
+		//TODO This needs to be changed into a array of line
+		newPhrase.line1 = centerPhrase (newPhrase.line1);
+		newPhrase.line2 = centerPhrase (newPhrase.line2);
+		newPhrase.line3 = centerPhrase (newPhrase.line3);
+		newPhrase.line4 = centerPhrase (newPhrase.line4);
+
+
+		Debug.Log ("Center Phrase Line 1:" + newPhrase.line1);
+		Debug.Log ("Center Phrase Line 2:" + newPhrase.line2);
+		Debug.Log ("Center Phrase Line 3:" + newPhrase.line3);
+		Debug.Log ("Center Phrase Line 4:" + newPhrase.line4);
+
+
+		return newPhrase;
 	}
 
 	/*
@@ -75,7 +105,7 @@ public class PhraseHandler : MonoBehaviour {
       * takes the word and assign it to corresponding row line depending 
       * on the number of free letter spaces available.
       */
-	public PhraseData convertPhrase(string phrase, string hint, string title)
+	PhraseData convertPhrase(string phrase, string hint, string title)
 	{
 		//Variables
 		int maxRowLength = getMaxRowLength();
@@ -103,11 +133,11 @@ public class PhraseHandler : MonoBehaviour {
 
 		foreach (string word in words) 
 		{
-			for (int cycle = 0; cycle < maxRowLength; cycle++)
+			for (int cycle = 0; cycle < maxColLength; cycle++)
 			{
 				if (linecount == cycle)
 				{
-					if (line[cycle].Length <= maxRowLength)
+					if (line[cycle].Length < maxRowLength)
 					{
 						if (line[cycle].Length > 0){space = " ";}
 						tempword = line[cycle];
@@ -135,10 +165,10 @@ public class PhraseHandler : MonoBehaviour {
 		tempPhrase.line3 = line[2];
 		tempPhrase.line4 = line[3];
 
-		Debug.Log("Line1: " + line[0]);
-		Debug.Log("Line2: " + line[1]);
-		Debug.Log("Line3: " + line[2]);
-		Debug.Log("Line4: " + line[3]);
+		Debug.Log("Line1: " + line[0] + line[0].Length.ToString());
+		Debug.Log("Line2: " + line[1] + line[1].Length.ToString());
+		Debug.Log("Line3: " + line[2] + line[2].Length.ToString());
+		Debug.Log("Line4: " + line[3] + line[3].Length.ToString());
 
 		return tempPhrase;
 
