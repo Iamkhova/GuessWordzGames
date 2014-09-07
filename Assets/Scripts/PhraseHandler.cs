@@ -160,10 +160,10 @@ public class PhraseHandler : MonoBehaviour {
 
 		tempPhrase.hint = hint;
 		tempPhrase.title = title;
-		tempPhrase.line1 = line[0];
-		tempPhrase.line2 = line[1];
-		tempPhrase.line3 = line[2];
-		tempPhrase.line4 = line[3];
+		tempPhrase.line1 = line[0].ToUpper();
+		tempPhrase.line2 = line[1].ToUpper();
+		tempPhrase.line3 = line[2].ToUpper();
+		tempPhrase.line4 = line[3].ToUpper();
 
 		Debug.Log("Line1: " + line[0] + line[0].Length.ToString());
 		Debug.Log("Line2: " + line[1] + line[1].Length.ToString());
