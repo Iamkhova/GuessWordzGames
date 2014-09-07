@@ -35,6 +35,16 @@ public class GameBlockController : MonoBehaviour {
 	
 	public GameBlockState currentState;
 	public GameBlockState newState;
+
+	//Init Game Sprite on awake
+	void Awake () {
+
+		SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer> ();
+
+		if (spriteRenderer != null)
+						spriteRenderer.sprite = defaultGraphic;
+
+		}
 	
 	// Use this for initialization
 	void Start () {
@@ -46,6 +56,11 @@ public class GameBlockController : MonoBehaviour {
 	void Update () {
 
 		checkStateChange ();
+		if (!string.IsNullOrEmpty (Input.inputString)) 
+		{
+			Debug.Log ("Key Hit: " + Input.inputString);
+
+				}
 	
 	}
 
