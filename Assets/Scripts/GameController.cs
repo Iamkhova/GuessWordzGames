@@ -140,4 +140,16 @@ public class GameController : MonoBehaviour
 		}
 
 	}
+
+	public void processLetterSelected (int letterValue)
+	{
+				for (int i = 1; i <= 56; i++) {
+						if (gameBlockArray [i - 1].gameObject.GetComponent<GameBlockController> ().getValue () == letterValue) {
+								Debug.Log ("Letter Match Found.. proceed.");
+				gameBlockArray [i - 1].gameObject.GetComponent<GameBlockController> ().stateActiveExposed();
+
+						}
+
+				}
+		}
 }

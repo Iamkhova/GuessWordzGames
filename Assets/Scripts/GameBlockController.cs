@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class GameBlockController : MonoBehaviour {
@@ -50,15 +50,30 @@ public class GameBlockController : MonoBehaviour {
 	void Start () {
 		
 		currentState = GameBlockState.Inactive;
+		//TouchScreenKeyboard.Open("", TouchScreenKeyboardType.Default, false, false, false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
+
+		GameObject test;
+		string temp;
+		int value;
+
 		checkStateChange ();
 		if (!string.IsNullOrEmpty (Input.inputString)) 
 		{
 			Debug.Log ("Key Hit: " + Input.inputString);
+
+			temp = Input.inputString;
+			temp = temp.ToUpper();
+			char[] array = temp.ToCharArray();
+			value = convertLetter(array[0]);
+			test = GameObject.Find ("GameBoardController");
+			test.gameObject.GetComponent<GameController> ().processLetterSelected (value);
+			Debug.Log("Char Hit: " + array[0]);
+
 
 				}
 	
@@ -197,6 +212,99 @@ public class GameBlockController : MonoBehaviour {
 		return value;
 	}
 
+	// Find Sprite that matches block
+	private int convertLetter (char letterValue)
+	{
+		int value;
+		switch (letterValue) 
+		{
+		case LETTER_A :
+			value = 0;
+			break;
+		case LETTER_B :
+			value = 1;
+			break;
+		case LETTER_C :
+			value = 2;
+			break;
+		case LETTER_D :
+			value = 3;
+			break;
+		case LETTER_E :
+			value = 4;
+			break;
+		case LETTER_F :
+			value = 5;
+			break;
+		case LETTER_G :
+			value = 6;
+			break;
+		case LETTER_H :
+			value = 7;
+			break;
+		case LETTER_I :
+			value = 8;
+			break;
+		case LETTER_J :
+			value = 9;
+			break;
+		case LETTER_K :
+			value = 10;
+			break;
+		case LETTER_L :
+			value = 11;
+			break;
+		case LETTER_M :
+			value = 12;
+			break;
+		case LETTER_N :
+			value = 13;
+			break;
+		case LETTER_O :
+			value = 14;
+			break;
+		case LETTER_P :
+			value = 15;
+			break;
+		case LETTER_Q :
+			value = 16;
+			break;
+		case LETTER_R :
+			value = 17;
+			break;
+		case LETTER_S :
+			value = 18;
+			break;
+		case LETTER_T :
+			value = 19;
+			break;
+		case LETTER_U :
+			value = 20;
+			break;
+		case LETTER_V :
+			value = 21;
+			break;
+		case LETTER_W :
+			value = 22;
+			break;
+		case LETTER_X :
+			value = 23;
+			break;
+		case LETTER_Y :
+			value = 24;
+			break;
+		case LETTER_Z :
+			value = 25;
+			break;
+		default:
+			value = 999;
+			break;
+			
+		}
+		
+		return value;
+	}
+
 	public void setValue (char letter)
 	{
 
@@ -212,10 +320,23 @@ public class GameBlockController : MonoBehaviour {
 
 		}
 
+	public int getValue()
+	{
+		int value;
+		value = convertLetter (blockStringValue);
+		return value;
+
+	}
+
 
 	public void stateActiveHidden()
 	{
 		newState = GameBlockState.ActiveHidden;
+		}
+
+	public void stateActiveExposed()
+	{
+		newState = GameBlockState.ActiveExposed;
 		}
 	
 

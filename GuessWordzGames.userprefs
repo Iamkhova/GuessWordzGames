@@ -1,10 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameBlockController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\scrollKeyboard\gameBlockPressed.cs">
     <Files>
-      <File FileName="Assets\Scripts\GameBlockController.cs" Line="45" Column="46" />
+      <File FileName="Assets\Scripts\GameBlockController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\scrollKeyboard\ScrollBlockController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\scrollKeyboard\KeyBlockController.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\GameController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\scrollKeyboard\rightArrowPressed.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\PhraseHandler.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\scrollKeyboard\leftArrowPressed.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\scrollKeyboard\gameBlockPressed.cs" Line="15" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
