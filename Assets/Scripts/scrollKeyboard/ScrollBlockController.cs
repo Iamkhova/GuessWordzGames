@@ -16,6 +16,7 @@ public class ScrollBlockController : MonoBehaviour {
 	public float scrollBoard_y;
 	public int maxKeyBlocks;
 
+
 	const int LEFTARROW = 0;
 	const int RIGHTARROW = 1;
 

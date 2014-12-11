@@ -1,15 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\scrollKeyboard\gameBlockPressed.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\scrollBar\scrollBarController.cs">
     <Files>
-      <File FileName="Assets\Scripts\GameBlockController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\scrollKeyboard\ScrollBlockController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\scrollKeyboard\KeyBlockController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GameController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\scrollKeyboard\rightArrowPressed.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PhraseHandler.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\scrollKeyboard\leftArrowPressed.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\scrollKeyboard\gameBlockPressed.cs" Line="15" Column="29" />
+      <File FileName="Assets\Scripts\scrollKeyboard\gameBlockPressed.cs" Line="18" Column="3" />
+      <File FileName="Assets\Scripts\scrollBar\sbBlockPressed.cs" Line="20" Column="1" />
+      <File FileName="Assets\Scripts\scrollBar\letterBlockOBJController.cs" Line="32" Column="3" />
+      <File FileName="Assets\Scripts\scrollBar\scrollBarObjController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\scrollBar\scrollBarController.cs" Line="50" Column="51" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
