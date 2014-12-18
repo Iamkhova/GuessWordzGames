@@ -1,10 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\scrollBar\scrollBarController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\scrollBar\sbBlockPressed.cs">
     <Files>
-      <File FileName="Assets\Scripts\scrollKeyboard\gameBlockPressed.cs" Line="18" Column="3" />
-      <File FileName="Assets\Scripts\scrollBar\sbBlockPressed.cs" Line="20" Column="1" />
-      <File FileName="Assets\Scripts\scrollBar\letterBlockOBJController.cs" Line="32" Column="3" />
+      <File FileName="Assets\Scripts\GameController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameBlockController.cs" Line="36" Column="1" />
+      <File FileName="Assets\Scripts\scrollKeyboard\gameBlockPressed.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\scrollBar\sbBlockPressed.cs" Line="11" Column="67" />
+      <File FileName="Assets\Scripts\scrollBar\letterBlockOBJController.cs" Line="36" Column="3" />
       <File FileName="Assets\Scripts\scrollBar\scrollBarObjController.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\scrollBar\scrollBarController.cs" Line="50" Column="51" />
     </Files>

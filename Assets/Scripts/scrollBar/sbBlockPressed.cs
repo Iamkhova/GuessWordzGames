@@ -7,7 +7,8 @@ public class sbBlockPressed : MonoBehaviour {
 	{
 		int value;
 		GameObject test;
-		
+
+		this.gameObject.GetComponent<letterBlockOBJController> ().toggleState ();
 		value = this.gameObject.GetComponent<letterBlockOBJController> ().getValue ();
 		test = GameObject.Find ("GameBoardController");
 		test.gameObject.GetComponent<GameController> ().processLetterSelected (value);

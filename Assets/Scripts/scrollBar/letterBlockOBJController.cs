@@ -11,13 +11,33 @@ public class letterBlockOBJController : MonoBehaviour {
 	public float posX;
 	public float posY;
 
+	public enum blockState
+	{
+		Inactive, Active
+
+	}
+
+	public blockState currentState;
+	public blockState newState;
+
 	// Use this for initialization
 	void Start () {
-	
+		currentState = blockState.Active;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+	
+	}
+
+	public void toggleState()
+	{
+		// TODO Apply Shaders Code to Tint Texture to Grayscale
+
+		if (currentState == blockState.Active) {
+			transform.renderer.material.color = Color.black;
+			currentState = blockState.Inactive;
+		}
 	
 	}
 
