@@ -8,13 +8,14 @@ public class sbBlockPressed : MonoBehaviour {
 		int value;
 		GameObject test;
 
-		this.gameObject.GetComponent<letterBlockOBJController> ().toggleState ();
-		value = this.gameObject.GetComponent<letterBlockOBJController> ().getValue ();
-		test = GameObject.Find ("GameBoardController");
-		test.gameObject.GetComponent<GameController> ().processLetterSelected (value);
-		
-		
-		Debug.Log ("Keyboard block value:" + value + " pressed.");
-		
+		if (this.gameObject.GetComponent<letterBlockOBJController> ().currentState == letterBlockOBJController.blockState.Active) {
+						this.gameObject.GetComponent<letterBlockOBJController> ().toggleState ();
+						value = this.gameObject.GetComponent<letterBlockOBJController> ().getValue ();
+						test = GameObject.Find ("GameBoardController");
+						test.gameObject.GetComponent<GameController> ().processLetterSelected (value);
+						Debug.Log ("Keyboard block value:" + value + " pressed.");
+				} else {
+						Debug.Log ("Keyboard block value ALREADY pressed once.");
+				}
 	}
 }

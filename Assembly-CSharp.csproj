@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\GameBlockController.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\PhraseHandler.cs" />
+     <Compile Include="Assets\Scripts\ScoringHandler.cs" />
      <Compile Include="Assets\Scripts\scrollBar\letterBlockOBJController.cs" />
      <Compile Include="Assets\Scripts\scrollBar\sbBlockPressed.cs" />
      <Compile Include="Assets\Scripts\scrollBar\sbLeftArrowPressed.cs" />

@@ -143,13 +143,23 @@ public class GameController : MonoBehaviour
 
 	public void processLetterSelected (int letterValue)
 	{
-				for (int i = 1; i <= 56; i++) {
-						if (gameBlockArray [i - 1].gameObject.GetComponent<GameBlockController> ().getValue () == letterValue) {
-								Debug.Log ("Letter Match Found.. proceed.");
-				gameBlockArray [i - 1].gameObject.GetComponent<GameBlockController> ().stateActiveExposed();
+		bool _guessRight = false;
 
+				for (int i = 1; i <= 56; i++) {
+						if (gameBlockArray [i - 1].gameObject.GetComponent<GameBlockController> ().getValue () == letterValue) 
+						{
+							Debug.Log ("Letter Match Found.. proceed.");
+							gameBlockArray [i - 1].gameObject.GetComponent<GameBlockController> ().stateActiveExposed();
+							this.GetComponent<ScoringHandler>().addPoints(); // Add points to score
+							_guessRight = true;
 						}
 
+				}
+
+			if (_guessRight) {
+						this.GetComponent<ScoringHandler> ().guessRight ();
+				} else {
+						this.GetComponent<ScoringHandler> ().guessWrong ();
 				}
 		}
 }
