@@ -11,9 +11,9 @@ public class GameController : MonoBehaviour
 	public float gameboard_y = 2.0f;
 	public int maxNumRows = 14;
 	public int maxNumColumns = 4;
-	public string title = " Andriod App Developer";
+	public string title = "";
 	public string phrase = "Kareem Jamaal Glover";
-	public string hint ="Married to Carmen Neal";
+	public string hint ="";
 
 	public GameObject[] gameBlockArray;
 	public PhraseHandler.PhraseData thePhrase = new PhraseHandler.PhraseData();
@@ -93,6 +93,7 @@ public class GameController : MonoBehaviour
 
 		//compile phrase into one variable
 		gamePhrase = thePhrase.line1 + thePhrase.line2 + thePhrase.line3 + thePhrase.line4;
+		phrase = gamePhrase;
 
 		//load string into charcater array
 		letterArray = gamePhrase.ToCharArray();
@@ -128,8 +129,18 @@ public class GameController : MonoBehaviour
 				gameBlockArray[i].gameObject.GetComponent<GameBlockController>().newState = GameBlockController.GameBlockState.ActiveHidden;
 			}
 
-			/*
+
 			// TODO Light up Board on Freebies
+
+			char blockValue = gameBlockArray[i].gameObject.GetComponent<GameBlockController>().blockStringValue;
+
+			if (blockValue == '\'') { gameBlockArray[i].gameObject.GetComponent<GameBlockController>().stateActiveExposed();}
+			if (blockValue == '/') { gameBlockArray[i].gameObject.GetComponent<GameBlockController>().stateActiveExposed();}
+			if (blockValue == '-') { gameBlockArray[i].gameObject.GetComponent<GameBlockController>().stateActiveExposed();}
+			if (blockValue == ',') { gameBlockArray[i].gameObject.GetComponent<GameBlockController>().stateActiveExposed();}
+
+
+			/*
 			if (block[i].dspValue() == '\'') { block[i].setLetterVisible(true); }
 			if (block[i].dspValue() == '/') { block[i].setLetterVisible(true);}
 			if (block[i].dspValue() == '-') { block[i].setLetterVisible(true); }

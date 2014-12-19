@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\GameBlockController.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\LoadPhraseHandler.cs" />
      <Compile Include="Assets\Scripts\PhraseHandler.cs" />
      <Compile Include="Assets\Scripts\ScoringHandler.cs" />
      <Compile Include="Assets\Scripts\scrollBar\letterBlockOBJController.cs" />
@@ -61,6 +62,7 @@
      <Compile Include="Assets\Scripts\scrollKeyboard\gameBlockPressed.cs" />
      <Compile Include="Assets\Scripts\scrollKeyboard\leftArrowPressed.cs" />
      <Compile Include="Assets\Scripts\scrollKeyboard\rightArrowPressed.cs" />
+     <None Include="Assets\Resources\phrases.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>

@@ -14,6 +14,13 @@ public class PhraseHandler : MonoBehaviour {
 
 	}//end PhraseData Class
 
+	public class PhraseXML
+	{
+		public string phraseTitle;
+		public string phraseText;
+		public string phraseHint;
+	}
+
 	//Get Max Length of Scoreboard Row
 	private int getMaxRowLength()
 	{
@@ -74,13 +81,16 @@ public class PhraseHandler : MonoBehaviour {
 	{
 		//TODO Ideally this will load from XML file or from WEB API
 		PhraseData newPhrase = new PhraseData ();
+		PhraseXML findPhrase = new PhraseXML ();
 
-		string title = " Andriod App Developer";
-		string phrase = "Kareem Jamaal Glover like candy apples";
-		string hint ="Married to Carmen Neal";
+		//string title = " Andriod App Developer";
+		//string phrase = "Kareem Jamaal Glover like candy apples";
+		//string hint ="Married to Carmen Neal";
+
+		findPhrase = this.GetComponent<LoadPhraseHandler> ().getNewPhrase ();
 
 		// Convert phrase into game format
-		newPhrase = convertPhrase (phrase, hint, title);
+		newPhrase = convertPhrase (findPhrase.phraseText, findPhrase.phraseTitle, findPhrase.phraseHint);
 
 		//Center phrase line
 		//TODO This needs to be changed into a array of line
