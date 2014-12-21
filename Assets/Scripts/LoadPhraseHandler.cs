@@ -65,8 +65,13 @@ public class LoadPhraseHandler : MonoBehaviour {
 
 	public PhraseHandler.PhraseXML getNewPhrase()
 	{
+		loadPhrases (); // Reload the Phrases.. just in case
+
 		PhraseHandler.PhraseXML _thePhrase = new PhraseHandler.PhraseXML ();
 		int ranNumber = Random.Range (0, maxPhraseCount);
+
+		Debug.Log ("Max Phrase Count: " + maxPhraseCount);
+		Debug.Log ("Random Phrase Number: " + ranNumber);
 
 		_thePhrase.phraseTitle = phraseXML [ranNumber].phraseTitle;
 		_thePhrase.phraseText = phraseXML [ranNumber].phraseText;
@@ -79,13 +84,21 @@ public class LoadPhraseHandler : MonoBehaviour {
 	private string getPath() 
 	{
 		#if UNITY_EDITOR
-		return Application.dataPath + "/Resources/" + fileName;
-		#elif UNITY_ANDROID
-		return Application.persistentDataPath + fileName;
-		#elif UNITY_IPHONE
-		return Application.persistentDataPath + "/" + fileName;
-		#else
-		return Application.datapath + "/" + fileName;
+			Debug.Log ("Device show as UNITY_EDITOR");
+			return Application.dataPath + "/Resources/" + fileName;
+		#endif
+	
+		#if UNITY_ANDROID
+			return Application.persistentDataPath + "/" + fileName;
+		#endif
+
+		#if UNITY_IPHONE
+			return Application.persistentDataPath + "/" + fileName;
+		#endif
+
+
+		#if UNITY_STANDALONE_WIN
+			return Application.datapath + "/" + fileName;
 		#endif
 
 	}
