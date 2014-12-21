@@ -98,25 +98,6 @@ public class GameController : MonoBehaviour
 		//load string into charcater array
 		letterArray = gamePhrase.ToCharArray();
 
-	
-		/*
-		 * Load Char Array Phrase into the Blocks
-		
-		for (int i = 0; i < gamePhrase.length(); i++)
-		{
-			block[i].setValue(phraseArray[i]);
-			if (block[i].dspValue() != ' ')
-				block[i].setBlockVisible(true);
-			
-			// Light up Board on Freebies
-			if (block[i].dspValue() == '\'') { block[i].setLetterVisible(true); }
-			if (block[i].dspValue() == '/') { block[i].setLetterVisible(true);}
-			if (block[i].dspValue() == '-') { block[i].setLetterVisible(true); }
-			if (block[i].dspValue() == ',') { block[i].setLetterVisible(true);}
-			
-		}
-		*/
-
 		for (int i = 1; i <= gamePhrase.Length; i++) 
 		{
 
@@ -138,15 +119,6 @@ public class GameController : MonoBehaviour
 			if (blockValue == '/') { gameBlockArray[i].gameObject.GetComponent<GameBlockController>().stateActiveExposed();}
 			if (blockValue == '-') { gameBlockArray[i].gameObject.GetComponent<GameBlockController>().stateActiveExposed();}
 			if (blockValue == ',') { gameBlockArray[i].gameObject.GetComponent<GameBlockController>().stateActiveExposed();}
-
-
-			/*
-			if (block[i].dspValue() == '\'') { block[i].setLetterVisible(true); }
-			if (block[i].dspValue() == '/') { block[i].setLetterVisible(true);}
-			if (block[i].dspValue() == '-') { block[i].setLetterVisible(true); }
-			if (block[i].dspValue() == ',') { block[i].setLetterVisible(true);}
-            */
-
 			
 		}
 
@@ -172,5 +144,40 @@ public class GameController : MonoBehaviour
 				} else {
 						this.GetComponent<ScoringHandler> ().guessWrong ();
 				}
+
+		//Check for Gameover
+		if (isGameOver()) {
+
+			Debug.Log ("Run Game Over Code");
+
+
+				}
 		}
+
+	private bool isGameOver()
+	{
+		bool _gameOver = true;
+
+	
+		for (int i = 1; i <= 56; i++) 
+		{ 
+			if (gameBlockArray [i - 1].gameObject.GetComponent<GameBlockController>().currentState == GameBlockController.GameBlockState.ActiveHidden)
+			{
+				_gameOver = false;
+
+			}
+
+					
+		}
+
+		if (this.GetComponent<ScoringHandler> ().getGuessLeft() <= 0) {
+			_gameOver = true;
+		}
+
+		if (_gameOver == true) {Debug.Log("All inactive blocks found or chances used up.");} else {Debug.Log ("Inactive letters still exist.");}
+
+		return _gameOver;
+
+
+	}
 }

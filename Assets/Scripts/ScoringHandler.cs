@@ -6,6 +6,7 @@ public class ScoringHandler : MonoBehaviour {
 	public int guess_wrong = 0;
 	public int guess_right = 0;
 	public int current_points = 0;
+	public int guesses_left = 3;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +23,7 @@ public class ScoringHandler : MonoBehaviour {
 	public void guessWrong()
 	{
 		guess_wrong += 1;
+		guesses_left -= 1;
 	}
 
 	public void guessRight()
@@ -35,5 +37,10 @@ public class ScoringHandler : MonoBehaviour {
 	{
 
 		current_points += 100;
+	}
+
+	public int getGuessLeft()
+	{
+		return guesses_left;
 	}
 }

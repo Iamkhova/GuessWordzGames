@@ -1,11 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\LoadPhraseHandler.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameController.cs">
     <Files>
-      <File FileName="Assets\Scripts\GameController.cs" Line="36" Column="23" />
+      <File FileName="Assets\Scripts\ScoringHandler.cs" Line="44" Column="23" />
+      <File FileName="Assets\Scripts\GameController.cs" Line="173" Column="1" />
       <File FileName="Assets\Scripts\LoadPhraseHandler.cs" Line="78" Column="60" />
-      <File FileName="Assets\Scripts\ScoringHandler.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GameBlockController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameBlockController.cs" Line="63" Column="3" />
       <File FileName="Assets\Scripts\PhraseHandler.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\scrollKeyboard\gameBlockPressed.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\scrollBar\sbBlockPressed.cs" Line="1" Column="1" />

@@ -332,11 +332,13 @@ public class GameBlockController : MonoBehaviour {
 	public void stateActiveHidden()
 	{
 		newState = GameBlockState.ActiveHidden;
+		checkStateChange ();
 		}
 
 	public void stateActiveExposed()
 	{
 		newState = GameBlockState.ActiveExposed;
+		checkStateChange ();
 		}
 	
 
