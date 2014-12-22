@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{CE8C06DB-7C33-A3AC-15BC-EA5F212AB4EF}") = "GuessWordzGames", "Assembly-CSharp-vs.csproj", "{BBD7513A-151C-2C89-70E0-1556F78CF1D8}"
 EndProject
+Project("{CE8C06DB-7C33-A3AC-15BC-EA5F212AB4EF}") = "GuessWordzGames", "Assembly-CSharp-Editor-vs.csproj", "{2822F66E-56EE-1A7B-A389-9962C6F426F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,11 +15,15 @@ Global
 		{BBD7513A-151C-2C89-70E0-1556F78CF1D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBD7513A-151C-2C89-70E0-1556F78CF1D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBD7513A-151C-2C89-70E0-1556F78CF1D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2822F66E-56EE-1A7B-A389-9962C6F426F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2822F66E-56EE-1A7B-A389-9962C6F426F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2822F66E-56EE-1A7B-A389-9962C6F426F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2822F66E-56EE-1A7B-A389-9962C6F426F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																																																	GlobalSection(MonoDevelopProperties) = preSolution
+																																																																																					GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
