@@ -31,6 +31,7 @@ public class GameController : MonoBehaviour
 		loadGamePieces ();
 		buildGameBoard();
 		loadPhrasesIntoBoard ();
+		//creatHUD ();
 
 	
 	}// end of void START
@@ -121,6 +122,17 @@ public class GameController : MonoBehaviour
 			if (blockValue == ',') { gameBlockArray[i].gameObject.GetComponent<GameBlockController>().stateActiveExposed();}
 			
 		}
+
+	}
+
+	void creatHUD ()
+	{
+		GameObject hudScore;
+
+		hudScore = new GameObject ("hudScore");
+		hudScore.AddComponent<UILabel> ();
+		hudScore.GetComponent<UILabel> ().text = "test";
+				hudScore.transform.position = new Vector3 (0, 0, 0);
 
 	}
 
